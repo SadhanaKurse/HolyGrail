@@ -1,0 +1,29 @@
+version: '7.0.9'
+networks:
+  app-network:
+   driver: bridge
+services:
+  redis: 
+    image: redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - app-network
+    ports:
+      - '6379:6379'
+  # api:
+  #   build: ./full-stack-holy-grail-application_starter
+  #   container_name: holy_grail_1
+  #   ports:
+  #     - '3000:3000'
+  #   volumes:
+  #     - ./full-stack-holy-grail-application_starter:/index
+
+
+    
+
+
+
+
+
+     
